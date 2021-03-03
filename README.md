@@ -1,1 +1,1 @@
-# Dise-o-de-software
+# Diseño de sofware
