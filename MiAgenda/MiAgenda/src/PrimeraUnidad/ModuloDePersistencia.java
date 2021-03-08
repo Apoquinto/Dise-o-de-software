@@ -8,7 +8,9 @@ package PrimeraUnidad;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  *
@@ -51,7 +53,27 @@ public class ModuloDePersistencia{
     }
     
     public static void agregarContacto(String[] contacto){
+        // Agrego el contacto a la información de la aplicación.
         MiAgenda.agenda.add(contacto);
+        // Almaceno el contacto en el archivo .csv
+        FileWriter escritor = null;
+        PrintWriter pw = null;
+        try{
+            escritor = new FileWriter("C:\\Temporal\\contactos.csv", true);
+            pw = new PrintWriter(escritor);
+
+            pw.println(contacto[0]+","+contacto[1]+","+contacto[2]+","+contacto[3]+","+contacto[4]+","+contacto[5]);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+           try {
+           if (null != escritor)
+              escritor.close();
+           } catch (Exception e2) {
+              e2.printStackTrace();
+           }
+        }
+
     }
 
     /** 
