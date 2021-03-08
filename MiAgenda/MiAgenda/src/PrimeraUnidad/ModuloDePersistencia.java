@@ -50,7 +50,10 @@ public class ModuloDePersistencia{
         }
     }
     
-    
+    public static void agregarContacto(String[] contacto){
+        MiAgenda.agenda.add(contacto);
+    }
+
     /** 
      * @return String
      */

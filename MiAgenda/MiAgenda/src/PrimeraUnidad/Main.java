@@ -35,7 +35,7 @@ public class Main {
         // Iniciamos la carga de la información del modulo de persistencia.
         ModuloDePersistencia persistencia = new ModuloDePersistencia();
         persistencia.obtenerContactos();
-        
+
         //instanciamos listado
         new Listado().setVisible(true);
         //llenamos la lista con datos en MiAgenda
