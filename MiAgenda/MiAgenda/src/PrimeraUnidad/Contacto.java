@@ -66,6 +66,7 @@ public class Contacto {
         return correo;
     }
 
+    // Transforma los datos de la clase en un String dinámico.
     public String[] obtenerDatos(){
         String[] datos = {getNombre(), getApellido(), getApellido(), getTipoTelefono().toString(), getTelefono(), getCorreo()};
         return datos;
