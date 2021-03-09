@@ -33,17 +33,16 @@ public class Main {
         }
         
         // Iniciamos la carga de la información del modulo de persistencia.
-        // ModuloDePersistencia persistencia = new ModuloDePersistencia();
-        // persistencia.obtenerContactos();
         
-        String[] c1={"Juan", "Perez","Masculino","Fijo","051233525", "JuanPerez@correo.com"};
-        String[] c2={"Maria", "Gonzales","Femenino","Celular","0981234567", "MariaGonzales@correo.com"};
-        MiAgenda.agenda.add(c1);
-        MiAgenda.agenda.add(c2);
+
+        //String[] c1={"Juan", "Perez","Masculino","Fijo","051233525", "JuanPerez@correo.com"};
+        //String[] c2={"Maria", "Gonzales","Femenino","Celular","0981234567", "MariaGonzales@correo.com"};
+        //MiAgenda.agenda.add(c1);
+        //MiAgenda.agenda.add(c2);
         
         //instanciamos listado
-        new Listado().setVisible(true);
+        //new Listado().setVisible(true);
         //llenamos la lista con datos en MiAgenda
-        Listado.mostrarContactos();
+        //Listado.mostrarContactos();
     }
 }

@@ -4,13 +4,15 @@ public class Contacto {
 
     private String nombre;
     private String apellido;
+    private String genero;
     private TipoTelefono tipoTelefono;
     private String telefono;
     private String correo;
 
-    public Contacto(String nombre, String apellido, TipoTelefono tipoTelefono, String telefono, String correo){
+    public Contacto(String nombre, String apellido, String genero, TipoTelefono tipoTelefono, String telefono, String correo){
         this.nombre = nombre;
         this.apellido = apellido;
+        this.genero = genero;
         this.tipoTelefono = tipoTelefono;
         this.telefono = telefono;
         this.correo = correo;
@@ -22,6 +24,10 @@ public class Contacto {
 
     public void setApellido(String apellido){
         this.apellido = apellido;
+    }
+
+    public void setGenero(String genero){
+        this.genero = genero;
     }
 
     public void setTipoTelefono(TipoTelefono tipoTelefono){
@@ -44,6 +50,10 @@ public class Contacto {
         return apellido;
     }
 
+    public String getGenero(){
+        return genero;
+    }
+
     public TipoTelefono getTipoTelefono(){
         return tipoTelefono;
     }
@@ -54,5 +64,10 @@ public class Contacto {
 
     public String getCorreo(){
         return correo;
+    }
+
+    public String[] obtenerDatos(){
+        String[] datos = {getNombre(), getApellido(), getApellido(), getTipoTelefono().toString(), getTelefono(), getCorreo()};
+        return datos;
     }
 }
