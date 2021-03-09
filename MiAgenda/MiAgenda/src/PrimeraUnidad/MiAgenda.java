@@ -21,9 +21,20 @@ public class MiAgenda {
     public MiAgenda() {
     }
     
+    public static void nuevoContacto(String [] datos){
+        TipoTelefono tipoTelefono;
+        if(datos[3] == "Fijo"){
+            tipoTelefono = TipoTelefono.FIJO;
+        }
+        else{
+            tipoTelefono = TipoTelefono.CELULAR;
+        }
+        Contacto contacto = new Contacto(datos[0], datos[1], datos[2], tipoTelefono, datos[4], datos[5]);
+        agregarContacto(contacto);
+    }
+
     public static void agregarContacto(Contacto contacto){
         agenda.add(contacto);
-        System.out.println("Agregado contacto: " + contacto.getNombre());
     }
 
     public static Iterator<String []> cargarContactos(){
