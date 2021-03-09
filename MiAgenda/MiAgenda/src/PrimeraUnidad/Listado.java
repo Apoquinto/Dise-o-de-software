@@ -373,7 +373,7 @@ public class Listado extends javax.swing.JFrame {
         if(txtBuscar.getText().length()==0){
             mostrarContactos();
         } else{
-            Iterator it = MiAgenda.agenda.iterator();
+            Iterator it = MiAgenda.cargarContactos();
             DefaultListModel newmodelo= new DefaultListModel(), modelo= new DefaultListModel();
             //cargamos datos de agenda para filtrar
             while (it.hasNext()) {

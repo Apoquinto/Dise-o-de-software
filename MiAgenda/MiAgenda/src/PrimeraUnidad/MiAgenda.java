@@ -16,7 +16,7 @@ public class MiAgenda {
 
     //clase para poder acceder a la agenda desde cualquier formulario
     //ArrayList fue la forma que encontre de tener un arreglo dinamico
-    public static ArrayList<Contacto> agenda = new ArrayList<Contacto>();
+    private static ArrayList<Contacto> agenda = new ArrayList<Contacto>();
 
     public MiAgenda() {
     }
