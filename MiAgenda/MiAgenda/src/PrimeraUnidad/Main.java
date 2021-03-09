@@ -39,8 +39,8 @@ public class Main {
         MiAgenda.agregarContacto(Maria);
         
         //instanciamos listado
-        //new Listado().setVisible(true);
+        new Listado().setVisible(true);
         //llenamos la lista con datos en MiAgenda
-        //Listado.mostrarContactos();
+        Listado.mostrarContactos();
     }
 }

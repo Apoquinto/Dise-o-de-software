@@ -399,9 +399,9 @@ public class Listado extends javax.swing.JFrame {
         //limpiar lista para mostrarla filtrada
         lista.removeAll();
         DefaultListModel modelo = new DefaultListModel();
-        Iterator i = MiAgenda.agenda.iterator();
+        Iterator i = MiAgenda.cargarContactos();
         String genero = null, fono= null;
-        int queGenero=0, queFono=0, queCorreo=0;
+        int queGenero=0, queFono=0;
         //usamos flags para filtrar por gereno y fono
         if(hombres.isSelected()){
             queGenero++;
