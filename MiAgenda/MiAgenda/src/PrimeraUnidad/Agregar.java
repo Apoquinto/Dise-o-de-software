@@ -153,7 +153,7 @@ public class Agregar extends javax.swing.JFrame {
         } else{
             //agregamos los datos a la agenda
             String[] datos={nombre.getText(), apellido.getText(), generoElegido, tipoFono.getSelectedItem().toString(), numeroFono.getText(), correo.getText()};
-            ModuloDePersistencia.agregarContacto(datos);
+            MiAgenda.agenda.add(datos);
             //Limpiamos formulario
             nombre.setText("");
             apellido.setText("");
