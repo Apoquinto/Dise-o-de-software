@@ -33,12 +33,10 @@ public class Main {
         }
         
         // Iniciamos la carga de la información del modulo de persistencia.
-        
-
-        //String[] c1={"Juan", "Perez","Masculino","Fijo","051233525", "JuanPerez@correo.com"};
-        //String[] c2={"Maria", "Gonzales","Femenino","Celular","0981234567", "MariaGonzales@correo.com"};
-        //MiAgenda.agenda.add(c1);
-        //MiAgenda.agenda.add(c2);
+        Contacto Juan = new Contacto("Juan", "Perez","Masculino",TipoTelefono.FIJO,"051233525", "JuanPerez@correo.com");
+        Contacto Maria = new Contacto("Maria", "Gonzales","Femenino",TipoTelefono.CELULAR,"0981234567", "MariaGonzales@correo.com");
+        MiAgenda.agregarContacto(Juan);
+        MiAgenda.agregarContacto(Maria);
         
         //instanciamos listado
         //new Listado().setVisible(true);
