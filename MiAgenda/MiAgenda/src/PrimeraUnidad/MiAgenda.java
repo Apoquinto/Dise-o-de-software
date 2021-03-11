@@ -6,7 +6,6 @@ package PrimeraUnidad;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  *
@@ -19,6 +18,7 @@ public class MiAgenda {
     private static ArrayList<Contacto> agenda = new ArrayList<Contacto>();
 
     public MiAgenda() {
+        MiAgenda.agenda = AgendaCSV.obtenerContactos();
     }
     
     public static void nuevoContacto(String [] datos){
@@ -30,6 +30,7 @@ public class MiAgenda {
             tipoTelefono = TipoTelefono.CELULAR;
         }
         Contacto contacto = new Contacto(datos[0], datos[1], datos[2], tipoTelefono, datos[4], datos[5]);
+        AgendaCSV.agregarContacto(datos);
         agregarContacto(contacto);
     }
 
